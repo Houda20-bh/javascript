@@ -4,43 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://kit.fontawesome.com/b9a0719e01.js"
+    crossorigin="anonymous"
+  ></script>
+  <style>
+    .pink {
+      color: rgb(251, 0, 255);
+    }
+  </style>
     <title>a shopping cart</title>
 </head>
 <body>
+  <center>
     <div class="cart1">
         <button class="delete-btn" type="button">X</button>
+        <br> <br>
+        <span><i class="fas fa-heart"></i></span>
         <h3> MacBook <br /> <span id="s1">200</span>$</h3>
       <img src="/DOM Project/img/img.jpeg"  width="100"/>
         <br />
-        <button id="plus">+</button>
+        <button id="a1" onclick="adding(this.id)">+</button>
         <span id="q1">0</span>
-        <button id="minus">-</button>
+        <button id="m1"onclick=" substract(this.id)">-</button>
         <span>TOTAL =</span>
         <span id="t1">0</span>
       </div>
+      <br> <br>
       <div class="cart2">
         <button class="delete-btn" type="button">X</button>
+        <br> <br>
+        <i class="fas fa-heart"></i>
         <h3> MacBook <br /> <span id="s2">4000</span>$</h3>
-      <img src="/ProjetDom/img 2.jpeg"  width="100"/>
+      <img src="/DOM Project/img/img3.jpeg"  width="100"/>
         <br />
-        <button id="plus">+</button>
+        <button id="a2" onclick="adding(this.id)">+</button>
         <span id="q2">0</span>
-        <button id="minus">-</button>
+        <button id="m2" onclick=" substract(this.id)">-</button>
         <span>TOTAL =</span>
         <span id="t2">0</span>
       </div>
+      <br> <br>
       <div class="cart3">
         <button class="delete-btn" type="button">X</button>
+        <br> <br>
+        <i class="fas fa-heart"></i>
         <h3> MacBook <br /> <span id="s3">600</span>$</h3>
-      <img src="/ProjetDom/img3.jpeg"  width="100"/>
+      <img src="/DOM Project/img/img 2.jpeg" width="100"/>
         <br />
-        <button id="plus">+</button>
+        <button id="a3"onclick="adding(this.id)">+</button>
         <span id="q3">0</span>
-        <button id="minus">-</button>
+        <button id="m3"onclick=" substract(this.id)">-</button>
         <span>TOTAL =</span>
         <span id="t3">0</span>
       </div>
+      <br> <br>
+      
       <div>TOTAL PRICE= <span id="totalp">0</span></div>
+    </center>
       <script src="/DOM Project/main.js"> </script>
 </body>
 </html>
