@@ -1,0 +1,36 @@
+LGORITHM Sum_Array
+VAR
+    i,j: INTEGER :=0;
+    set1 : ARRAY_OF INTEGER[n1];
+    set2 : ARRAY_OF INTEGER[n2]
+    set : ARRAY_OF[n1+n2];
+    sum_commun, sum_distinct : INTEGER:=0
+    found : BOOLEAN
+BEGIN
+    Write("type the length of set1")
+    Read(n1)
+    Write("type the length of set2")
+    Read(n2)
+    FOR i FROM 0 TO n1-1 STEP DO
+        Read(set1[i])
+    END_FOR
+    FOR j FROM 0 TO n2-1 STEP DO
+        Read(set2[j])
+    END_FOR
+    set := concat(set1,set2);
+    FOR k FROM 0 TO set.length STEP DO
+        found:= false
+        FOR l FROM 0 TO set.length STEP DO
+            IF (set[k] = set[L] AND k<>l) THEN
+                found:=true;
+                sum_commun = sum_commun+ set[k]
+            END_IF
+        END_FOR
+        IF (found= false) THEN
+            sum_distinct = sum_distinct + set[k]
+        END_IF
+    END_FOR
+    Write("the Sum of distinct el is :", sum_distinct)
+    Write("the Sum of overlapping el is :", sum_commun)
+
+END
