@@ -1,0 +1,42 @@
+PROCEDURE dot_Product(T1,T2: ARRAY_OF FLOAT[3], VAR ps: FLOAT )
+VAR
+    i,j : INTEGER:=0,
+BEGIN
+    FOR i FROM 0 TO n-1 STEP  DO
+        FOR j FROM 0 TO n-1 STEP step  DO
+            ps := ps + T1[i]*T2[j]
+        END_FOR
+    END_FOR
+END
+
+ALGORITHM VECTORIELS
+VAR
+    r: INTEGER
+    n,i,j,k: INTEGER :=0;
+    ps: FLOAT :=0;
+    v1,v2 : ARRAY_OF FLOAT[n]
+BEGIN
+    write("type the number of repetition")
+    Read(r)
+    REPEAT
+    Write("type the length of v1 and v2")
+    Read(n)
+    Write("type the el of v1")
+    FOR i FROM 0 TO n-1 STEP step  DO
+        Read(v1[i])
+    END_FOR
+
+    FOR j FROM 0 TO max STEP step  DO
+        Read(v2[j])
+    END_FOR
+
+    dot_Product(v1,v2,Ps)
+    Write(Ps)
+    IF (Ps = 0) THEN
+        Write("V1 and V2 are orthogonals")
+    ELSE 
+    Write("V1 and V2 aren't orthogonals")
+    END_IF
+
+    UNTIL (k=r)
+END
