@@ -1,0 +1,26 @@
+FUNCTION insertionSort(arr: ARRAY_OF INTEGER) : ARRAY_OF INTEGER;
+VAR
+    i , j :INTEGER;
+BEGIN
+   IF (i>0) THEN
+    FOR i FROM 1 TO arr.length-1 STEP 1  DO
+        x := arr[i];
+        j := i-1;
+        WHILE (j >= 0 AND arr[j] > x) DO
+            arr[j+1] := arr[j]
+            j := j-1
+        END_WHILE
+        arr[j+1] := x
+    END_FOR
+   END_IF
+    RETURN arr ;
+END 
+
+ALGORITHM algo4
+VAR
+    arr1: ARRAY_OF INTEGER
+BEGIN
+    write("Type the array ");
+    read(arr1)
+    arr1:= insertionSort(arr);
+END
